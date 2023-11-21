@@ -35,4 +35,4 @@ The transmit is began when a byte is written in the Tx Buffer. The data byte is 
 
 5- SPI is enabled to avoid any confuse related the data sent from rising edge before.
 
-![gif](https://github.com/yasinsulhan/SPI-stm32f44-between-lis302dl/assets/109728194/79dfb7bf-07f1-4055-b2dd-b63539dd91f0)
+![gif](https://github.com/yasinsulhan/SPI-stm32f4-between-lis302dl/assets/109728194/9f87a756-21f5-417b-a227-176a333275e8)
