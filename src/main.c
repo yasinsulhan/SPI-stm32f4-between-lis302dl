@@ -22,17 +22,6 @@ void RCC_Config()
 	RCC->CIR |= 0x00800000;			// CSS Flag clear
 }
 
-
-uint8_t Convert_To_Val(uint8_t val){
-
-		val = ~val;
-		//val += 1;
-		//val &= 0x00FF;
-		val = ( val * 2300 ) / 127;
-		return (-1 * val);
-
-}
-
 //A,E aktif olmalý.
 void GPIO_Config()
 {
