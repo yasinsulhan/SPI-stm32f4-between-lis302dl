@@ -110,11 +110,6 @@ int main(void)
 	  x = SPI_Read(x_address, 0x00);
 	  y = SPI_Read(y_address, 0x00);
 	  z = SPI_Read(z_address, 0x00);
-
-	  n_y = Convert_To_Val(y);
-
-
-
   }
 }
 
