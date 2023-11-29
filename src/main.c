@@ -6,16 +6,13 @@ uint8_t x_address = 0x29, y_address = 0x2B, z_address = 0x2D;
 
 int8_t n_y;
 
-SPI_InitTypeDef SPIinit;
-GPIO_InitTypeDef GPIOinit;
-
 void RCC_Config()
 {
 	RCC->CR |= 0x00010000;			// HSEON and HSEONRDY enable
 	while(!(RCC->CR & 0x00020000));	// HSEON Ready Flag wait
 	RCC->CR |= 0x00080000;			// CSS Enable
 	RCC->CR |= 0x01000000;			//pll enable
-	RCC->PLLCFGR |= 0x00400000;		// PLL e HSE seçtik
+	RCC->PLLCFGR |= 0x00400000;		// PLL e HSE seÃ§tik
 	RCC->PLLCFGR |= 0x00000004;		// PLL M = 4
 	RCC->PLLCFGR |= 0x00005A00;		// Pll N = 168
 	RCC->PLLCFGR |= 0x00000000;		// PLL p = 2
@@ -36,7 +33,7 @@ uint8_t Convert_To_Val(uint8_t val){
 
 }
 
-//A,E aktif olmalý.
+//A,E aktif olmalÃ½.
 void GPIO_Config()
 {
 
@@ -66,7 +63,7 @@ void SPI_Config()
 	SPI1->CR1 |= (0 << 10);									// Full duplex (Transmit and receive)
 	SPI1->CR1 |= (0 << 7);									// MSB priority
 	SPI1->CR1 |= (1 << 2);									// Master mode
-	SPI1->CR1 |= (1 << 9) | (1 << 8);						// Software slave management enabled														// It ýs set when SSM is set
+	SPI1->CR1 |= (1 << 9) | (1 << 8);						// Software slave management enabled														// It Ã½s set when SSM is set
 	SPI1->CR1 |= (1 << 6);									// SPI Enable
 
 	GPIOE->ODR |= (1 << 3);
